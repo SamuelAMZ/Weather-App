@@ -6,71 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- font -->
     <link rel="stylesheet" href="./font/stylesheet.css" />
-    <!-- icons -->
-    <link rel="stylesheet" href="./icons/awesome/icons.min.css">
     <!-- css for dev mode -->
     <link rel="stylesheet" href="../src/assets/scss/style.css" />
     <!-- css for prod mode -->
     <!-- <link rel="stylesheet" href="bundle.css" /> -->
-    
+
     <title>Weather App</title>
     <!-- <link rel="stylesheet" href="assets/font/stylesheet.css" /> -->
   </head>
 
-  <body class="theme-3">
-    <header>
-      <h1><a href="./index.html">Weather App</a></h1>
-      <span class="github"><i class="fa-brands fa-github"></i></span>
-      <!-- <div class="notification">Lorem alert</div> -->
-    </header>
-    <main>
-      <div class="container">
-        <!-- controlls -->
-        <!-- pro -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere mollitia architecto rem fuga saepe ullam earum repellat odit voluptates a!</p>
-        
-
-        <div class="elements">
-          <!-- write here -->
-        </div>
-        <!-- mobiles -->
-        <div class="hide-controls-panel-bc">
-          <i class="fa-solid fa-angle-right bc"></i>
-        </div>
+  <body class="theme-1">
+    <!-- first screen -->
+    <div class="first-screen-container">
+      <div class="moon-in-background">
+        <img class="moon" src="./img/moon.png" alt="moon" />
       </div>
 
-      <div class="containtest">
-        <!-- mobiles -->
-        <div class="hide-controls-panel-mb">
-          <i class="fa-solid fa-angle-right mb"></i>
+      <div class="images-overlap">
+        <div class="town">
+          <img src="./img/town.png" alt="town" />
         </div>
-        <!-- desktop -->
-        <div class="hide-controls-panel">
-          <i class="fa-solid fa-angle-right dt"></i>
+
+        <img class="big-cloud" src="./img/bigcloud.png" alt="cloud" />
+
+        <img class="small-1" src="./img/cloud-26.png" alt="" />
+
+        <img class="small-2" src="./img/clord-26.png" alt="" />
+      </div>
+      <div class="start-button"><p>Explore</p></div>
+    </div>
+
+    <!-- second screen -->
+    <div class="second-screen-container">
+      <div class="second-header">
+        <div class="menu">
+          <img class="menu-icon" src="./icons/Groupe 7.svg" />
         </div>
-        <div class="test">
-          <!-- write tests project -->
-          <div class="test-element">
-            <!-- pro -->
+        <div class="title">
+          <p>Paris, France</p>
+        </div>
+        <div class="search">
+          <img class="search-icon" src="./icons/Search-Dark.svg" />
+        </div>
+      </div>
+      <div class="second-body">
+        <div class="second-body-header">
+          <p>Today</p>
+          <p>Tomorrow</p>
+          <p>Next Week</p>
+        </div>
+        <div class="current-weather">
+          <img class="bk2" src="./img/bigcloud.png" alt="" />
+          <img class="bk1" src="./img/Groupe de masques 1.png" alt="" />
+          <div class="current-data">
+            <p class="temp">25°</p>
+            <p class="desc">clouds and sun</p>
+            <p class="hum">humidity</p>
+            <p class="humval">35</p>
           </div>
- 
-
+        </div>
+        <div class="next-weather">
+          <div class="next-title"><p>Next 15 days</p></div>
+          <div class="next-days">
+            <div class="days first">
+              <p>Monday</p>
+              <p>Icon</p>
+              <p>40°</p>
+              <p>50° - 70°</p>
+            </div>
+            <div class="days second">
+              <p>Monday</p>
+              <p>Icon</p>
+              <p>40°</p>
+              <p>50° - 70°</p>
+            </div>
+            <div class="days third">
+              <p>Monday</p>
+              <p>Icon</p>
+              <p>40°</p>
+              <p>50° - 70°</p>
+            </div>
+            <div class="days four">
+              <p>Monday</p>
+              <p>Icon</p>
+              <p>40°</p>
+              <p>50° - 70°</p>
+            </div>
+            <div class="days five">
+              <p>Monday</p>
+              <p>Icon</p>
+              <p>40°</p>
+              <p>50° - 70°</p>
+            </div>
+            <div class="days six">
+              <p>Monday</p>
+              <p>Icon</p>
+              <p>40°</p>
+              <p>50° - 70°</p>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
-
-    <footer>
-      <div id="footer">
-        <div class="theme1"></div>
-        <div class="theme2"></div>
-        <div class="theme3"></div>
-        <div id="footerheader" class="drag">
-          <i class="fa-solid fa-maximize"></i>
-        </div>
-      </div>
-    </footer>
-
-    <div class="animation"></div>
+    </div>
 
     <script src="bundle.js" defer></script>
   </body>
