@@ -112,15 +112,6 @@
 
     <!-- third screen -->
     <div class="third-screen-container">
-      <div class="third-header">
-        <div class="menu">
-          <img class="menu-icon" src="./icons/Groupe 7.svg" />
-        </div>
-        <div class="title"></div>
-        <div class="search">
-          <img class="search-icon" src="./icons/Search-Dark.svg" />
-        </div>
-      </div>
       <div class="day-details">
         <span class="close-button"><img src="./img/close.png" /></span>
         <p class="target-day">Monday</p>
@@ -153,6 +144,83 @@
             <img src="./img/other-img5.png" alt="" />
             <p>50°</p>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- search screen -->
+    <div class="search-screen-container">
+      <form>
+        <div class="search-input-container">
+          <button><img src="./icons/Search-Dark.svg" alt="" /></button>
+          <input
+            type="text"
+            id="search"
+            autocomplete="off"
+            placeholder="Search For Towns"
+            spellcheck="false"
+          />
+        </div>
+      </form>
+      <div class="close-search">
+        <img src="./img/close.png" alt="" />
+      </div>
+    </div>
+
+    <!-- menu screen -->
+    <div class="menu-screen-container">
+      <div class="menu-itself">
+        <div class="elements-container">
+          <div class="title">
+            <p>Menu</p>
+          </div>
+          <!--  the search elmt -->
+          <div class="search-element">
+            <button><img src="./icons/Search-Dark.svg" alt="" /></button>
+            <input
+              type="text"
+              id="search-input-elements"
+              autocomplete="off"
+              placeholder="Search For Towns"
+              spellcheck="false"
+            />
+          </div>
+          <!-- feature cities elements -->
+          <div class="featured-element">
+            <p>City of the day</p>
+            <div class="city-card">
+              <img
+                src="./img/singapore-GettyImages-165845874 (1) (1).jpg"
+                alt=""
+              />
+              <div class="info">
+                <p class="town-name">Singapore</p>
+                <p class="town-decr">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est,
+                  a libero? Delectus repudiandae
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- suggestions -->
+          <div class="suggestions">
+            <p>Common Search</p>
+            <div class="cities-suggestion">
+              <p>Lorem</p>
+              <p>ipsum</p>
+              <p>dolor</p>
+              <p>adipisicing</p>
+              <p>sit</p>
+              <p>amet</p>
+              <p>consectetur</p>
+              <p>adipisicing</p>
+              <p>sit</p>
+              <p>amet</p>
+            </div>
+          </div>
+        </div>
+        <div class="close-menu">
+          <img src="./img/close.png" alt="" />
         </div>
       </div>
     </div>

@@ -2,16 +2,7 @@
   width: 100vw;
   height: 100vh;
   padding: 2rem;
-
-  .third-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-
-    width: 1440px;
-    height: 5vh;
-    margin: 0 auto;
-  }
+  margin-top: 3rem;
 
   .day-details {
     width: 28rem;
@@ -23,6 +14,7 @@
     text-align: center;
     padding: 1rem;
     position: relative;
+    z-index: 2;
 
     .close-button {
       width: 50px;
@@ -76,4 +68,12 @@
   }
 
   display: none;
+}
+
+.show {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

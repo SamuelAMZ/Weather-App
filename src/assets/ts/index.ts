@@ -4,11 +4,15 @@ export class Events {
   constructor(
     private startButton: HTMLElement,
     private otherDays: NodeList,
-    private closeButton: HTMLElement
+    private closeButton: HTMLElement,
+    private searchIcon: HTMLElement,
+    private menuIcon: HTMLElement
   ) {
     this.startButton = startButton;
     this.otherDays = otherDays;
     this.closeButton = closeButton;
+    this.searchIcon = searchIcon;
+    this.menuIcon = menuIcon;
   }
 
   // events for the pages appearance
@@ -26,6 +30,16 @@ export class Events {
       day.addEventListener("click", () => {
         Views.thirdScreen();
       });
+    });
+
+    // show search screen
+    this.searchIcon.addEventListener("click", (): void => {
+      Views.searchView();
+    });
+
+    // show menu screen
+    this.menuIcon.addEventListener("click", (): void => {
+      Views.menuView();
     });
   }
 }
