@@ -76,6 +76,7 @@
   width: 100vw;
   height: 100vh;
   padding: 2rem;
+  display: none;
 }
 .second-screen-container .second-header {
   display: flex;
@@ -102,7 +103,7 @@
 }
 .second-screen-container .second-body .second-body-header p {
   padding: 0 2rem 0 0;
-  font-weight: 500;
+  font-weight: 600;
 }
 .second-screen-container .second-body .current-weather {
   background-color: #5d50fe;
@@ -176,22 +177,122 @@
   height: 15rem;
   text-align: center;
   color: white;
+  position: relative;
+}
+.second-screen-container .second-body .next-weather .next-days .days .single-days {
+  font-weight: 600;
+}
+.second-screen-container .second-body .next-weather .next-days .days img {
+  width: 3rem;
+  height: auto;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.second-screen-container .second-body .next-weather .next-days .days .temp-detail {
+  font-size: 22px;
+  font-weight: 800;
+  padding: 0 0 1rem 0;
+}
+.second-screen-container .second-body .next-weather .next-days .days .extern {
+  width: 70px;
+  height: auto;
+  position: absolute;
+  bottom: -30px;
+  right: 0;
 }
 .second-screen-container .second-body .next-weather .next-days .first {
   background-color: #28e0ae;
+  box-shadow: 10px 30px 20px 0px rgba(40, 224, 175, 0.3490196078);
 }
 .second-screen-container .second-body .next-weather .next-days .second {
   background-color: #ff0090;
+  box-shadow: 10px 30px 20px 0px rgba(255, 0, 144, 0.3490196078);
 }
 .second-screen-container .second-body .next-weather .next-days .third {
   background-color: #ffae00;
+  box-shadow: 10px 30px 20px 0px rgba(255, 174, 0, 0.3490196078);
 }
 .second-screen-container .second-body .next-weather .next-days .four {
   background-color: #0090ff;
+  box-shadow: 10px 30px 20px 0px rgba(0, 144, 255, 0.3490196078);
 }
 .second-screen-container .second-body .next-weather .next-days .five {
   background-color: #dc0000;
+  box-shadow: 10px 30px 20px 0px rgba(220, 0, 0, 0.3490196078);
 }
 .second-screen-container .second-body .next-weather .next-days .six {
   background-color: #0051ff;
+  box-shadow: 10px 30px 20px 0px rgba(0, 81, 255, 0.3490196078);
+}
+
+.third-screen-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+.third-screen-container .third-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 1440px;
+  height: 5vh;
+  margin: 0 auto;
+}
+.third-screen-container .day-details {
+  width: 28rem;
+  min-height: 30rem;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-color: #28e0ae;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+.third-screen-container .day-details .close-button {
+  width: 50px;
+  height: auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+}
+.third-screen-container .day-details .target-day {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 3rem 0;
+}
+.third-screen-container .day-details .target-img {
+  width: 100px;
+  height: auto;
+  padding-bottom: 2rem;
+}
+.third-screen-container .day-details .temp-detail {
+  font-size: 40px;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.third-screen-container .day-details .temp-small {
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+.third-screen-container .day-details .other-details {
+  width: 100%;
+  height: 10rem;
+  border-radius: 30px;
+  margin: 0 auto;
+  background-color: white;
+  color: black;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+.third-screen-container .day-details .other-details img {
+  padding: 0.7rem 0;
 }/*# sourceMappingURL=style.css.map */

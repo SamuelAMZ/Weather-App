@@ -1,0 +1,77 @@
+.third-screen-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+
+  .third-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+
+    width: 1440px;
+    height: 5vh;
+    margin: 0 auto;
+  }
+
+  .day-details {
+    width: 28rem;
+    min-height: 30rem;
+    margin: 0 auto;
+    border-radius: 30px;
+    background-color: #28e0ae;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+
+    .close-button {
+      width: 50px;
+      height: auto;
+      background-color: white;
+      padding: 1rem;
+      border-radius: 100px;
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      cursor: pointer;
+    }
+    .target-day {
+      font-size: 40px;
+      font-weight: 600;
+      padding: 3rem 0;
+    }
+    .target-img {
+      width: 100px;
+      height: auto;
+      padding-bottom: 2rem;
+    }
+    .temp-detail {
+      font-size: 40px;
+      font-weight: 600;
+      padding-bottom: 1rem;
+    }
+    .temp-small {
+      font-size: 20px;
+      padding-bottom: 1rem;
+    }
+    .other-details {
+      width: 100%;
+      height: 10rem;
+      border-radius: 30px;
+      margin: 0 auto;
+      background-color: white;
+      color: black;
+      padding: 0 2rem;
+
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-items: center;
+      justify-content: center;
+
+      img {
+        padding: 0.7rem 0;
+      }
+    }
+  }
+}
