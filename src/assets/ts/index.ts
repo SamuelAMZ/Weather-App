@@ -1,4 +1,5 @@
 import { Views } from "./classes/views";
+import { ThirdData } from "../ts/classes/dataThird";
 
 export class Events {
   constructor(
@@ -27,8 +28,31 @@ export class Events {
 
     // show the third screen
     Array.from(this.otherDays).forEach((day) => {
-      day.addEventListener("click", () => {
-        Views.thirdScreen();
+      day.addEventListener("click", (e: any) => {
+        const check: string = e.target.getAttribute("data-d");
+        const data: any[] = ThirdData.gettingData(check);
+        Views.thirdScreen(data);
+      });
+    });
+    const otherDays: HTMLElement[] = [];
+    otherDays[0] = document.querySelector<HTMLElement>("#todays")!;
+    otherDays[1] = document.querySelector<HTMLElement>("#tomorrows")!;
+    otherDays[2] = document.querySelector<HTMLElement>("#threeDay")!;
+
+    otherDays.forEach((otherDay) => {
+      otherDay.addEventListener("click", () => {
+        let check: string = "un";
+        if (otherDay.getAttribute("id") === "todays") {
+          check = "un";
+        }
+        if (otherDay.getAttribute("id") === "tomorrows") {
+          check = "deu";
+        }
+        if (otherDay.getAttribute("id") === "threeDay") {
+          check = "tro";
+        }
+        const data: any[] = ThirdData.gettingData(check);
+        Views.thirdScreen(data);
       });
     });
 

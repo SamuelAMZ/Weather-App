@@ -41,6 +41,11 @@
         padding: 0 2rem 0 0;
         font-weight: 600;
       }
+      #todays,
+      #tomorrows,
+      #threeDay {
+        cursor: pointer;
+      }
     }
 
     .current-weather {
@@ -88,7 +93,7 @@
         }
         .humval {
           font-weight: 300;
-          font-size: 15px;
+          font-size: 20px;
         }
       }
     }
@@ -127,10 +132,10 @@
             font-weight: 600;
           }
           img {
-            width: 3rem;
+            width: 4.5rem;
             height: auto;
             margin: 0 auto;
-            padding: 1rem 0;
+            padding: 0.3rem 0;
           }
           .temp-detail {
             font-size: 22px;
@@ -155,7 +160,7 @@
           box-shadow: 10px 30px 20px 0px #ff009059;
         }
         .third {
-          background-color: #ffae00;
+          background-color: #cb8f0e;
           box-shadow: 10px 30px 20px 0px #ffae0059;
         }
         .four {

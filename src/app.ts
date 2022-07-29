@@ -1,5 +1,7 @@
 import "./assets/scss/style.scss";
 import { Events } from "./assets/ts/index";
+import { Api } from "./assets/ts/classes/api";
+import { PrintData } from "./assets/ts/classes/printdata";
 
 // initialize events
 const events = new Events(
@@ -12,4 +14,6 @@ const events = new Events(
 
 window.addEventListener("DOMContentLoaded", () => {
   events.showScreens();
+  Api.weather();
+  PrintData.getApiData();
 });

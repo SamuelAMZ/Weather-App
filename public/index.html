@@ -43,7 +43,7 @@
           <img class="menu-icon" src="./icons/Groupe 7.svg" />
         </div>
         <div class="title">
-          <p>Paris, France</p>
+          <p id="location">Paris, France</p>
         </div>
         <div class="search">
           <img class="search-icon" src="./icons/Search-Dark.svg" />
@@ -51,59 +51,62 @@
       </div>
       <div class="second-body">
         <div class="second-body-header">
-          <p>Today</p>
-          <p>Tomorrow</p>
-          <p>Next Week</p>
+          <p id="todays" class="live">Live Data</p>
+          <p id="tomorrows">Tomorrow</p>
+          <p id="threeDay">Next Week</p>
         </div>
         <div class="current-weather">
-          <img class="bk2" src="./img/bigcloud.png" alt="" />
+          <img id="dayOrNight" class="bk2" src="./img/day.png" alt="" />
           <img class="bk1" src="./img/Groupe de masques 1.png" alt="" />
           <div class="current-data">
-            <p class="temp">25°</p>
-            <p class="desc">clouds and sun</p>
+            <p id="currentTemp" class="temp">25°</p>
+            <p id="currentText" class="desc">clouds and sun</p>
             <p class="hum">humidity</p>
-            <p class="humval">35</p>
+            <p id="currentHum" class="humval">35</p>
           </div>
         </div>
         <div class="next-weather">
-          <div class="next-title"><p>Next 15 days</p></div>
+          <div class="next-title"><p>Next 7 days average</p></div>
           <div class="next-days">
-            <div class="days first">
-              <p class="single-days">Monday</p>
-              <img src="./img/sun.png" />
-              <p class="temp-detail">40°</p>
-              <p class="temp-small">50° - 70°</p>
-              <img src="./img/bottom-cloud.png" class="extern" />
+            <div data-d="un" class="days first">
+              <p data-d="un" id="firstDay" class="single-days">Monday</p>
+              <img data-d="un" id="icon1" src="./img/sun.png" />
+              <p data-d="un" id="average1" class="temp-detail">40°</p>
+              <p data-d="un" id="minmax1" class="temp-small">50° - 70°</p>
+              <img data-d="un" src="./img/bottom-cloud.png" class="extern" />
             </div>
-            <div class="days second">
-              <p class="single-days">Monday</p>
-              <img src="./img/001lighticons-18.png" />
-              <p class="temp-detail">40°</p>
-              <p class="temp-small">50° - 70°</p>
+            <div data-d="deu" class="days second">
+              <p data-d="deu" id="secondDay" class="single-days">Monday</p>
+              <img data-d="deu" id="icon2" src="./img/sun.png" />
+              <p data-d="deu" id="average2" class="temp-detail">40°</p>
+              <p data-d="deu" id="minmax2" class="temp-small">50° - 70°</p>
             </div>
-            <div class="days third">
-              <p class="single-days">Monday</p>
-              <img src="./img/001lighticons-27.png" />
-              <p class="temp-detail">40°</p>
-              <p class="temp-small">50° - 70°</p>
+            <div data-d="tro" class="days third">
+              <p data-d="tro" id="thirdDay" class="single-days">Monday</p>
+              <img data-d="tro" id="icon3" src="./img/sun.png" />
+              <p data-d="tro" id="average3" class="temp-detail">40°</p>
+              <p data-d="tro" id="minmax3" class="temp-small">50° - 70°</p>
+              <img data-d="tro" src="./img/bottom-cloud.png" class="extern" />
             </div>
-            <div class="days four">
-              <p class="single-days">Monday</p>
-              <img src="./img/001lighticons-18.png" />
-              <p class="temp-detail">40°</p>
-              <p class="temp-small">50° - 70°</p>
+            <div data-d="qua" class="days four">
+              <p data-d="qua" id="fourDay" class="single-days">Monday</p>
+              <img data-d="qua" id="icon4" src="./img/sun.png" />
+              <p data-d="qua" id="average4" class="temp-detail">40°</p>
+              <p data-d="qua" id="minmax4" class="temp-small">50° - 70°</p>
             </div>
-            <div class="days five">
-              <p class="single-days">Monday</p>
-              <img src="./img/001lighticons-27.png" />
-              <p class="temp-detail">40°</p>
-              <p class="temp-small">50° - 70°</p>
+            <div data-d="cin" class="days five">
+              <p data-d="cin" id="fiveDay" class="single-days">Monday</p>
+              <img data-d="cin" id="icon5" src="./img/sun.png" />
+              <p data-d="cin" id="average5" class="temp-detail">40°</p>
+              <p data-d="cin" id="minmax5" class="temp-small">50° - 70°</p>
+              <img data-d="cin" src="./img/bottom-cloud.png" class="extern" />
             </div>
-            <div class="days six">
-              <p class="single-days">Monday</p>
-              <img src="./img/001lighticons-06.png" />
-              <p class="temp-detail">40°</p>
-              <p class="temp-small">50° - 70°</p>
+            <div data-d="six" class="days six">
+              <p data-d="six" id="sixDay" class="single-days">Monday</p>
+              <img data-d="six" id="icon6" src="./img/sun.png" />
+              <p data-d="six" id="average6" class="temp-detail">40°</p>
+              <p data-d="six" id="minmax6" class="temp-small">50° - 70°</p>
+              <img data-d="six" src="./img/bottom-cloud.png" class="extern" />
             </div>
           </div>
         </div>
@@ -116,33 +119,33 @@
         <span class="close-button"><img src="./img/close.png" /></span>
         <p class="target-day">Monday</p>
         <img class="target-img" src="./img/sun.png" />
-        <p class="temp-detail">40°</p>
-        <p class="temp-small">50° - 70°</p>
+        <p id="temp-detail-average" class="temp-detail">40°</p>
+        <p id="temp-small" class="temp-small">50° - 70°</p>
         <div class="other-details">
           <div class="child-other">
-            <p>14:00</p>
+            <p>00:00</p>
             <img src="./img/other-img1.png" alt="" />
-            <p>50°</p>
+            <p id="date1">50°</p>
           </div>
           <div class="child-other">
-            <p>14:00</p>
+            <p>06:00</p>
             <img src="./img/other-img2.png" alt="" />
-            <p>50°</p>
+            <p id="date2">50°</p>
           </div>
           <div class="child-other">
-            <p>14:00</p>
+            <p>12:00</p>
             <img src="./img/other-img3.png" alt="" />
-            <p>50°</p>
+            <p id="date3">50°</p>
           </div>
           <div class="child-other">
-            <p>14:00</p>
+            <p>18:00</p>
             <img src="./img/other-img4.png" alt="" />
-            <p>50°</p>
+            <p id="date4">50°</p>
           </div>
           <div class="child-other">
-            <p>14:00</p>
+            <p>22:00</p>
             <img src="./img/other-img5.png" alt="" />
-            <p>50°</p>
+            <p id="date5">50°</p>
           </div>
         </div>
       </div>
@@ -225,6 +228,6 @@
       </div>
     </div>
 
-    <script src="bundle.js" defer></script>
+    <script src="bundle.js"></script>
   </body>
 </html>

@@ -41,11 +41,32 @@ export class Views {
   }
 
   //   show the third screen
-  static thirdScreen(): void {
+  static thirdScreen(data: any[]): void {
     // hide the first and second screen
     Views.getElements().firstScreen.style.display = "none";
     Views.getElements().menuScreen.style.display = "none";
     Views.getElements().secondScreen.style.opacity = "0.2";
+
+    // background color passing
+    document.querySelector<HTMLElement>(".day-details")!.style.backgroundColor =
+      data[0].color;
+    // day title passing
+    document.querySelector<HTMLElement>(".target-day")!.innerText = data[0].day;
+    // image
+    document.querySelector<HTMLImageElement>(".target-img")!.src = data[0].icon;
+    // temp detail
+    document.querySelector<HTMLElement>("#temp-detail-average")!.innerText =
+      data[0].average;
+    // small info
+    document.querySelector<HTMLElement>("#temp-small")!.innerText =
+      data[0].minmax;
+    // time temps
+    document.querySelector<HTMLElement>("#date1")!.innerText = data[0].date1;
+    document.querySelector<HTMLElement>("#date2")!.innerText = data[0].date2;
+    document.querySelector<HTMLElement>("#date3")!.innerText = data[0].date3;
+    document.querySelector<HTMLElement>("#date4")!.innerText = data[0].date4;
+    document.querySelector<HTMLElement>("#date5")!.innerText = data[0].date5;
+
     // show the third screen
     Views.getElements().thirdScreen.style.display = "block";
     Views.getElements().thirdScreen.classList.add("show");

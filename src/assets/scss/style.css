@@ -112,6 +112,11 @@
   padding: 0 2rem 0 0;
   font-weight: 600;
 }
+.second-screen-container .second-body .second-body-header #todays,
+.second-screen-container .second-body .second-body-header #tomorrows,
+.second-screen-container .second-body .second-body-header #threeDay {
+  cursor: pointer;
+}
 .second-screen-container .second-body .current-weather {
   background-color: #5d50fe;
   min-height: 45vh;
@@ -156,7 +161,7 @@
 }
 .second-screen-container .second-body .current-weather .current-data .humval {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 20px;
 }
 .second-screen-container .second-body .next-weather {
   min-height: 35vh;
@@ -191,10 +196,10 @@
   font-weight: 600;
 }
 .second-screen-container .second-body .next-weather .next-days .days img {
-  width: 3rem;
+  width: 4.5rem;
   height: auto;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 0.3rem 0;
 }
 .second-screen-container .second-body .next-weather .next-days .days .temp-detail {
   font-size: 22px;
@@ -217,7 +222,7 @@
   box-shadow: 10px 30px 20px 0px rgba(255, 0, 144, 0.3490196078);
 }
 .second-screen-container .second-body .next-weather .next-days .third {
-  background-color: #ffae00;
+  background-color: #cb8f0e;
   box-shadow: 10px 30px 20px 0px rgba(255, 174, 0, 0.3490196078);
 }
 .second-screen-container .second-body .next-weather .next-days .four {
@@ -316,6 +321,10 @@
   bottom: 0;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.129);
+}
+
+.live {
+  color: #5c2aff;
 }
 
 .search-screen-container {
@@ -441,7 +450,7 @@
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.069);
+  box-shadow: 0 0 12px 12px rgba(11, 11, 11, 0.154);
 }
 .menu-screen-container .menu-itself .elements-container .featured-element .city-card img {
   width: 100%;
@@ -474,5 +483,5 @@
   margin: 0.5rem;
   padding: 1rem;
   background-color: white;
-  box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.069);
+  box-shadow: 0 0 12px 12px rgba(11, 11, 11, 0.114);
 }/*# sourceMappingURL=style.css.map */
