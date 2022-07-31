@@ -1,5 +1,6 @@
 // print weather api data
 import { Api } from "./api";
+import { Theme } from "../_dashboard/theme";
 
 export class PrintData {
   // recreate a new json of what I need to change
@@ -75,13 +76,23 @@ export class PrintData {
       twentytwo: data.forecast.forecastday[2].hour[22].temp_c,
     });
 
+    // take the current time
+    dataArr.push(data.location.localtime);
+    let localTime: any[] = [];
+    for (let i = 0; i < 16; i++) {
+      if (i >= 11) {
+        localTime.push(dataArr[25][i]);
+      }
+    }
+
     // set new arr to the localstorage for global use
     localStorage.setItem("dataArr", JSON.stringify(dataArr));
     console.log(dataArr);
 
     // location print
     const location = document.getElementById("location") as HTMLElement;
-    location.innerText = dataArr[0] + ", " + dataArr[1];
+    location.innerText =
+      dataArr[0] + ", " + dataArr[1] + " - " + localTime.join("");
     // current temp print
     const currentTemp = document.getElementById("currentTemp") as HTMLElement;
     currentTemp.innerText = dataArr[2] + "°";
@@ -184,5 +195,29 @@ export class PrintData {
       "°";
     const icon6 = document.getElementById("icon6") as HTMLImageElement;
     icon6.src = "https:" + dataArr[16];
+
+    // add day or dark mode depend on the day
+    const body = document.querySelector<HTMLElement>("body")!;
+    const modeItself = document.querySelector<HTMLElement>(".mode-itself")!;
+    const themeAnim = document.querySelector<HTMLElement>(".theme-animation")!;
+    const menu = document.querySelector<HTMLImageElement>(".menu-icon")!;
+    const search = document.querySelector<HTMLImageElement>(".search-icon")!;
+
+    if (dataArr[5] === 0) {
+      modeItself.classList.add("active");
+      themeAnim.style.backgroundColor = "#fff";
+      menu.src = "./icons/menu-light.png";
+      search.src = "./icons/Search-light.svg";
+      body.classList.remove("theme-1");
+      body.classList.add("theme-2");
+    }
+    if (dataArr[5] === 1) {
+      modeItself.classList.remove("active");
+      themeAnim.style.backgroundColor = "#000";
+      menu.src = "./icons/menu-dark.svg";
+      search.src = "./icons/Search-Dark.svg";
+      body.classList.remove("theme-2");
+      body.classList.add("theme-1");
+    }
   }
 }

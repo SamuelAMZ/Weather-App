@@ -4,6 +4,7 @@ import { Api } from "./assets/ts/classes/api";
 import { PrintData } from "./assets/ts/classes/printdata";
 import { Search } from "./assets/ts/classes/search";
 import { Views } from "./assets/ts/classes/views";
+import { Theme } from "./assets/ts/_dashboard/theme";
 
 // initialize events
 const events = new Events(
@@ -63,3 +64,7 @@ commonSearch.addEventListener("click", (e: any) => {
   // load city clicked data
   PrintData.getApiData(e.target.innerText);
 });
+
+// add mode dark background animation
+const modeToggler = document.querySelector<HTMLElement>(".theme-animation")!;
+modeToggler.addEventListener("click", Theme.toggleMode);

@@ -1,0 +1,32 @@
+body.theme-1 {
+  --bk-prim1: #fff;
+  --bk-second1: #fff;
+  --bk-text: #000;
+}
+body.theme-2 {
+  --bk-prim1: #212121;
+  --bk-second1: #323232;
+  --bk-text: #fff;
+}
+
+.mode-itself {
+  width: 1px;
+  height: 1px;
+  border-radius: 100%;
+  background-color: #212121;
+  z-index: -1000;
+  transition: transform 0.8s ease-out;
+}
+
+.theme-animation {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.mode-itself.active {
+  transition: transform 1s ease-out;
+  transform: scale(10000);
+}
