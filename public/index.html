@@ -153,7 +153,7 @@
 
     <!-- search screen -->
     <div class="search-screen-container">
-      <form>
+      <form id="searchForm">
         <div class="search-input-container">
           <button><img src="./icons/Search-Dark.svg" alt="" /></button>
           <input
@@ -163,6 +163,17 @@
             placeholder="Search For Towns"
             spellcheck="false"
           />
+        </div>
+        <!-- autocomplete data -->
+        <div class="autocomplete">
+          <ul id="showAuto">
+            <!-- <li>Paris - France</li>
+            <li>Paris - United States</li>
+            <li>Paris - United States</li>
+            <li>Paris - United States</li>
+            <li>Paris - United States</li>
+            <li>Paris - United States</li> -->
+          </ul>
         </div>
       </form>
       <div class="close-search">
@@ -186,21 +197,25 @@
               autocomplete="off"
               placeholder="Search For Towns"
               spellcheck="false"
+              onselectstart="return false"
+              onpaste="return false"
+              onCopy="return false"
+              onCut="return false"
+              onDrag="return false"
+              onDrop="return false"
+              readonly
             />
           </div>
           <!-- feature cities elements -->
           <div class="featured-element">
             <p>City of the day</p>
             <div class="city-card">
-              <img
-                src="./img/singapore-GettyImages-165845874 (1) (1).jpg"
-                alt=""
-              />
+              <img src="./img/montreal.jpg" alt="" />
               <div class="info">
-                <p class="town-name">Singapore</p>
+                <p class="town-name">Montréal</p>
                 <p class="town-decr">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est,
-                  a libero? Delectus repudiandae
+                  Large island and port city on the St. Lawrence River at the
+                  foot of the Lachine Rapids
                 </p>
               </div>
             </div>
@@ -209,22 +224,55 @@
           <div class="suggestions">
             <p>Common Search</p>
             <div class="cities-suggestion">
-              <p>Lorem</p>
-              <p>ipsum</p>
-              <p>dolor</p>
-              <p>adipisicing</p>
-              <p>sit</p>
-              <p>amet</p>
-              <p>consectetur</p>
-              <p>adipisicing</p>
-              <p>sit</p>
-              <p>amet</p>
+              <p>New york</p>
+              <p>Edmonton</p>
+              <p>London</p>
+              <p>Bangkok</p>
+              <p>Paris</p>
+              <p>Hong Kong</p>
+              <p>Dubai</p>
+              <p>Singapore</p>
+              <p>Rome</p>
+              <p>Macau</p>
             </div>
           </div>
         </div>
         <div class="close-menu">
           <img src="./img/close.png" alt="" />
         </div>
+      </div>
+    </div>
+
+    <!-- loader -->
+    <div class="section-animation">
+      <svg class="svg">
+        <filter id="gooey">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+          <feColorMatrix
+            values="
+                          1 0 0 0 0
+                          0 1 0 0 0
+                          0 0 1 0 0
+                          0 0 0 20 -10
+                  
+                  "
+          ></feColorMatrix>
+        </filter>
+      </svg>
+      <div class="loader">
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3"></span>
+        <span style="--i: 4"></span>
+        <span style="--i: 5"></span>
+        <span style="--i: 6"></span>
+        <span style="--i: 7"></span>
+        <span style="--i: 8"></span>
+        <span class="rotate" style="--j: 0"></span>
+        <span class="rotate" style="--j: 1"></span>
+        <span class="rotate" style="--j: 2"></span>
+        <span class="rotate" style="--j: 3"></span>
+        <span class="rotate" style="--j: 4"></span>
       </div>
     </div>
 

@@ -38,6 +38,13 @@ export class Views {
     // show the second screen
     Views.getElements().secondScreen.style.opacity = "1";
     Views.getElements().secondScreen.style.display = "block";
+    // reset search view
+    document.querySelector<HTMLInputElement>("#search")!.value = "";
+    document.querySelector<HTMLElement>(".autocomplete")!.style.display =
+      "none";
+    document.querySelector<HTMLElement>(
+      ".search-input-container"
+    )!.style.borderRadius = "100px";
   }
 
   //   show the third screen
@@ -83,8 +90,11 @@ export class Views {
     Views.getElements().secondScreen.style.opacity = "0.2";
     Views.getElements().thirdScreen.style.display = "none";
     Views.getElements().menuScreen.style.display = "none";
+
     // show the search screen
     Views.getElements().searchScreen.style.display = "flex";
+    // focus
+    document.querySelector<HTMLInputElement>("#search")!.focus();
     // show the background element
     Views.viewsBackground(Views.getElements().searchScreen);
     // hide the background element
@@ -142,5 +152,27 @@ export class Views {
         e.target.remove();
       }
     });
+  }
+
+  // load loader
+  static loader() {
+    // hide the first, third and second screen
+    Views.getElements().firstScreen.style.display = "none";
+    Views.getElements().secondScreen.style.opacity = "0.2";
+    Views.getElements().thirdScreen.style.display = "none";
+    Views.getElements().menuScreen.style.display = "none";
+    Views.getElements().searchScreen.style.display = "none";
+
+    // appearance of the loader
+    document.querySelector<HTMLElement>(".section-animation")!.style.display =
+      "flex";
+
+    let timeoutApp = setTimeout(() => {
+      // make disapper of the loader
+      document.querySelector<HTMLElement>(".section-animation")!.style.display =
+        "none";
+      // show second screen
+      Views.secondScreen();
+    }, 2000);
   }
 }

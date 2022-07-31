@@ -20,7 +20,10 @@ export class Events {
   showScreens(): void {
     // show the second screen
     this.startButton.addEventListener("click", (): void => {
+      // // show screen
       Views.secondScreen();
+      // loader while loading data
+      Views.loader();
     });
     this.closeButton.addEventListener("click", () => {
       Views.secondScreen();
@@ -60,6 +63,11 @@ export class Events {
     this.searchIcon.addEventListener("click", (): void => {
       Views.searchView();
     });
+    document
+      .querySelector<HTMLElement>("#search-input-elements")!
+      .addEventListener("click", (): void => {
+        Views.searchView();
+      });
 
     // show menu screen
     this.menuIcon.addEventListener("click", (): void => {

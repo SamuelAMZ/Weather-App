@@ -2,6 +2,7 @@ const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = merge(
   common,
@@ -9,7 +10,10 @@ module.exports = merge(
   {
     mode: "production",
 
-    plugins: [new MiniCssExtractPlugin({ filename: "bundle.css" })],
+    plugins: [
+      new MiniCssExtractPlugin({ filename: "bundle.css" }),
+      new Dotenv(),
+    ],
 
     module: {
       rules: [

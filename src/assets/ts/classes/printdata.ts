@@ -3,7 +3,7 @@ import { Api } from "./api";
 
 export class PrintData {
   // recreate a new json of what I need to change
-  static async getApiData() {
+  static async getApiData(keyword: string) {
     let dataArr = [];
     const weekday = [
       "Sunday",
@@ -14,7 +14,8 @@ export class PrintData {
       "Friday",
       "Saturday",
     ];
-    let data = await Api.weather();
+
+    let data = await Api.weather(keyword);
 
     // get country name and city
     dataArr.push(data.location.name);
@@ -143,10 +144,14 @@ export class PrintData {
     const fourDay = document.getElementById("fourDay") as HTMLElement;
     fourDay.innerText = day4;
     const average4 = document.getElementById("average4") as HTMLElement;
-    average4.innerText = dataArr[8] + 1.2 + "°";
+    average4.innerText = (dataArr[8] + 1.2).toFixed(2) + "°";
     const minmax4 = document.getElementById("minmax4") as HTMLElement;
     minmax4.innerText =
-      dataArr[9] + 1.2 + "°" + " - " + (dataArr[10] + 1.2) + "°";
+      (dataArr[9] + 1.2).toFixed(2) +
+      "°" +
+      " - " +
+      (dataArr[10] + 1.2).toFixed(2) +
+      "°";
     const icon4 = document.getElementById("icon4") as HTMLImageElement;
     icon4.src = "https:" + dataArr[11];
     // day 5
@@ -154,10 +159,14 @@ export class PrintData {
     const fiveDay = document.getElementById("fiveDay") as HTMLElement;
     fiveDay.innerText = day5;
     const average5 = document.getElementById("average5") as HTMLElement;
-    average5.innerText = dataArr[18] + 0.7 + "°";
+    average5.innerText = (dataArr[18] + 0.7).toFixed(2) + "°";
     const minmax5 = document.getElementById("minmax5") as HTMLElement;
     minmax5.innerText =
-      dataArr[19] + 0.7 + "°" + " - " + (dataArr[20] + 0.7) + "°";
+      (dataArr[19] + 0.7).toFixed(2) +
+      "°" +
+      " - " +
+      (dataArr[20] + 0.7).toFixed(2) +
+      "°";
     const icon5 = document.getElementById("icon5") as HTMLImageElement;
     icon5.src = "https:" + dataArr[21];
     // day 6
@@ -165,10 +174,14 @@ export class PrintData {
     const sixDay = document.getElementById("sixDay") as HTMLElement;
     sixDay.innerText = day6;
     const average6 = document.getElementById("average6") as HTMLElement;
-    average6.innerText = dataArr[13] - 0.7 + "°";
+    average6.innerText = (dataArr[13] - 0.7).toFixed(2) + "°";
     const minmax6 = document.getElementById("minmax6") as HTMLElement;
     minmax6.innerText =
-      dataArr[14] + 0.5 + "°" + " - " + (dataArr[15] + 0.5) + "°";
+      (dataArr[14] + 0.5).toFixed(2) +
+      "°" +
+      " - " +
+      (dataArr[15] + 0.5).toFixed(2) +
+      "°";
     const icon6 = document.getElementById("icon6") as HTMLImageElement;
     icon6.src = "https:" + dataArr[16];
   }
