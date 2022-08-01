@@ -1,3 +1,4 @@
+@use "./breakpoint" as b;
 .search-screen-container {
   position: fixed;
   top: 0;
@@ -11,6 +12,10 @@
 
   form {
     z-index: 2;
+    @include b.breakpoint(large) {
+      width: 90%;
+      z-index: 10;
+    }
 
     .search-input-container {
       border-radius: 100px;

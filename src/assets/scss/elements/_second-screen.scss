@@ -1,9 +1,24 @@
+@use "./breakpoint" as b;
+
 .second-screen-container {
   width: 100vw;
   height: 100vh;
   padding: 2rem;
-  overflow: hidden;
   color: var(--bk-text);
+
+  @include b.breakpoint(xxl) {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  @include b.breakpoint(extra) {
+    width: 1240px;
+    margin: 0 auto;
+  }
+  @include b.breakpoint(large) {
+    width: 100vw;
+    margin: 0 auto;
+    overflow: scroll;
+  }
 
   // header
   .second-header {
@@ -11,7 +26,6 @@
     justify-content: space-between;
     padding: 0;
 
-    width: 1440px;
     height: 5vh;
     margin: 0 auto;
 
@@ -28,6 +42,10 @@
       img {
         width: 25px;
         height: auto;
+        @include b.breakpoint(extra) {
+          width: auto;
+          height: 25px;
+        }
       }
     }
     .menu {
@@ -37,8 +55,8 @@
   }
   //   body
   .second-body {
-    height: 85vh;
-    width: 1440px;
+    // height: 85vh;
+    // width: 1440px;
     margin: 0 auto;
 
     .second-body-header {
@@ -49,6 +67,9 @@
       p {
         padding: 0 2rem 0 0;
         font-weight: 600;
+        @include b.breakpoint(large) {
+          padding: 0 1rem 0 0;
+        }
       }
       #todays,
       #tomorrows,
@@ -65,6 +86,13 @@
       border-radius: 50px;
       position: relative;
       overflow: hidden;
+      @include b.breakpoint(extra) {
+        min-height: 60vh;
+      }
+      @include b.breakpoint(large) {
+        width: 100%;
+        min-height: 40vh;
+      }
 
       .bk1 {
         position: absolute;
@@ -88,7 +116,10 @@
         color: white;
 
         .temp {
-          font-size: 100px;
+          font-size: 7rem;
+          @include b.breakpoint(extra) {
+            font-size: 4rem;
+          }
         }
         .desc {
           font-size: 18px;
@@ -112,6 +143,9 @@
       width: 100%;
       margin: 0 auto;
       margin-top: 1rem;
+      @include b.breakpoint(large) {
+        margin-top: 2rem;
+      }
 
       .next-title {
         padding: 0 0 1rem 0;
@@ -123,6 +157,12 @@
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         gap: 3rem;
+        @include b.breakpoint(extra) {
+          gap: 1rem;
+        }
+        @include b.breakpoint(large) {
+          grid-template-columns: 1fr;
+        }
 
         .days {
           padding: 1rem;

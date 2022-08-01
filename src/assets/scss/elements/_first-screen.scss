@@ -1,3 +1,5 @@
+@use "./breakpoint" as b;
+
 .first-screen-container {
   height: 100vh;
   background: rgb(93, 80, 254);
@@ -20,6 +22,9 @@
       width: 37rem;
       height: auto;
       z-index: -1;
+      @include b.breakpoint(large) {
+        display: none;
+      }
     }
   }
 
@@ -28,11 +33,50 @@
     width: 100%;
     position: relative;
 
-    .town img {
+    .town .big {
       position: absolute;
       bottom: -10vh;
       width: 100%;
       z-index: 2;
+
+      @include b.breakpoint(xxl) {
+        bottom: -17vh;
+      }
+      @include b.breakpoint(my) {
+        bottom: -10vh;
+      }
+      @include b.breakpoint(extra) {
+        bottom: -10vh;
+      }
+      @include b.breakpoint-up(xxl) {
+        bottom: -20vh;
+      }
+      @include b.breakpoint(large) {
+        display: none;
+      }
+    }
+    .town .mob {
+      position: absolute;
+      bottom: -10vh;
+      width: 100%;
+      z-index: 2;
+
+      @include b.breakpoint(xxl) {
+        display: none;
+      }
+      @include b.breakpoint(my) {
+        display: none;
+      }
+      @include b.breakpoint(extra) {
+        display: none;
+      }
+      @include b.breakpoint-up(xxl) {
+        display: none;
+      }
+      @include b.breakpoint(large) {
+        display: block;
+        bottom: -1rem;
+      }
     }
 
     .big-cloud {
@@ -41,6 +85,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 3;
+      @include b.breakpoint(large) {
+        top: 60%;
+      }
     }
 
     .small-1,
@@ -60,7 +107,7 @@
     background-color: #5c2aff;
     height: 30vh;
     width: 100%;
-    z-index: 0;
+    z-index: 10;
 
     display: flex;
     align-items: center;
@@ -74,6 +121,7 @@
       padding: 1rem 5rem 1rem 5rem;
       border-radius: 100px;
       cursor: pointer;
+      z-index: 5;
     }
   }
 }

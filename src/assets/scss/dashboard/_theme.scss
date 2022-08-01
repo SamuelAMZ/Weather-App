@@ -1,3 +1,5 @@
+@use "../elements/breakpoint" as b;
+
 body.theme-1 {
   --bk-prim1: #fff;
   --bk-second1: #fff;
@@ -24,6 +26,9 @@ body.theme-2 {
   background-color: black;
   border-radius: 100px;
   cursor: pointer;
+  @include b.breakpoint(large) {
+    display: none;
+  }
 }
 
 .mode-itself.active {

@@ -1,8 +1,14 @@
+@use "./breakpoint" as b;
+
 .third-screen-container {
   width: 100vw;
   height: 100vh;
   padding: 2rem;
   margin-top: 3rem;
+
+  @include b.breakpoint(large) {
+    padding: 0;
+  }
 
   .day-details {
     width: 28rem;
@@ -15,6 +21,10 @@
     padding: 1rem;
     position: relative;
     z-index: 2;
+
+    @include b.breakpoint(large) {
+      width: 100%;
+    }
 
     .close-button {
       width: 50px;
