@@ -114,7 +114,7 @@
       margin-top: 1rem;
 
       .next-title {
-        padding: 1rem;
+        padding: 0 0 1rem 0;
         padding-left: 0;
         font-size: 20px;
         font-weight: 600;
@@ -136,6 +136,7 @@
           color: white;
           cursor: pointer;
           position: relative;
+          margin-top: 2rem;
 
           .single-days {
             font-weight: 600;
@@ -163,26 +164,32 @@
         .first {
           background-color: #28e0ae;
           box-shadow: 10px 30px 20px 0px #28e0af59;
+          transition: 0.1s ease-in-out;
         }
         .second {
           background-color: #ff0090;
           box-shadow: 10px 30px 20px 0px #ff009059;
+          transition: 0.2s ease-in-out;
         }
         .third {
           background-color: #cb8f0e;
           box-shadow: 10px 30px 20px 0px #ffae0059;
+          transition: 0.3s ease-in-out;
         }
         .four {
           background-color: #0090ff;
           box-shadow: 10px 30px 20px 0px #0090ff59;
+          transition: 0.4s ease-in-out;
         }
         .five {
           background-color: #dc0000;
           box-shadow: 10px 30px 20px 0px #dc000059;
+          transition: 0.5s ease-in-out;
         }
         .six {
           background-color: #0051ff;
           box-shadow: 10px 30px 20px 0px #0051ff59;
+          transition: 0.6s ease-in-out;
         }
       }
     }

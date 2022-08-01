@@ -24,6 +24,12 @@ export class Events {
       Views.secondScreen();
       // loader while loading data
       Views.loader();
+
+      // days cards entry animation
+      const days = document.querySelectorAll<HTMLElement>(".days")!;
+      Array.from(days).forEach((day: HTMLElement) => {
+        Views.daysAnimReset(day);
+      });
     });
     this.closeButton.addEventListener("click", () => {
       Views.secondScreen();

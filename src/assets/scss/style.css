@@ -213,7 +213,7 @@ body.theme-2 {
   margin-top: 1rem;
 }
 .second-screen-container .second-body .next-weather .next-title {
-  padding: 1rem;
+  padding: 0 0 1rem 0;
   padding-left: 0;
   font-size: 20px;
   font-weight: 600;
@@ -234,6 +234,7 @@ body.theme-2 {
   color: white;
   cursor: pointer;
   position: relative;
+  margin-top: 2rem;
 }
 .second-screen-container .second-body .next-weather .next-days .days .single-days {
   font-weight: 600;
@@ -259,26 +260,32 @@ body.theme-2 {
 .second-screen-container .second-body .next-weather .next-days .first {
   background-color: #28e0ae;
   box-shadow: 10px 30px 20px 0px rgba(40, 224, 175, 0.3490196078);
+  transition: 0.1s ease-in-out;
 }
 .second-screen-container .second-body .next-weather .next-days .second {
   background-color: #ff0090;
   box-shadow: 10px 30px 20px 0px rgba(255, 0, 144, 0.3490196078);
+  transition: 0.2s ease-in-out;
 }
 .second-screen-container .second-body .next-weather .next-days .third {
   background-color: #cb8f0e;
   box-shadow: 10px 30px 20px 0px rgba(255, 174, 0, 0.3490196078);
+  transition: 0.3s ease-in-out;
 }
 .second-screen-container .second-body .next-weather .next-days .four {
   background-color: #0090ff;
   box-shadow: 10px 30px 20px 0px rgba(0, 144, 255, 0.3490196078);
+  transition: 0.4s ease-in-out;
 }
 .second-screen-container .second-body .next-weather .next-days .five {
   background-color: #dc0000;
   box-shadow: 10px 30px 20px 0px rgba(220, 0, 0, 0.3490196078);
+  transition: 0.5s ease-in-out;
 }
 .second-screen-container .second-body .next-weather .next-days .six {
   background-color: #0051ff;
   box-shadow: 10px 30px 20px 0px rgba(0, 81, 255, 0.3490196078);
+  transition: 0.6s ease-in-out;
 }
 
 .third-screen-container {
@@ -451,10 +458,9 @@ body.theme-2 {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
-  left: 0;
+  left: -100%;
+  transition: 0.3s ease;
   color: var(--bk-text);
-  display: none;
 }
 .menu-screen-container .menu-itself {
   z-index: 2;

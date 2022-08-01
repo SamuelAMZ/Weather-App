@@ -34,7 +34,8 @@ export class Views {
     Views.getElements().firstScreen.style.display = "none";
     Views.getElements().thirdScreen.style.display = "none";
     Views.getElements().searchScreen.style.display = "none";
-    Views.getElements().menuScreen.style.display = "none";
+    // Views.getElements().menuScreen.style.display = "none";
+    Views.getElements().menuScreen.style.left = "-100%";
     // show the second screen
     Views.getElements().secondScreen.style.opacity = "1";
     Views.getElements().secondScreen.style.display = "block";
@@ -45,13 +46,22 @@ export class Views {
     document.querySelector<HTMLElement>(
       ".search-input-container"
     )!.style.borderRadius = "100px";
+    // days cards entry animation
+    const days = document.querySelectorAll<HTMLElement>(".days")!;
+    Array.from(days).forEach((day: HTMLElement) => {
+      Views.daysAnim(day);
+    });
+    // hide back element
+    if (document.querySelector<HTMLElement>(".back-element")) {
+      document.querySelector<HTMLElement>(".back-element")!.remove();
+    }
   }
 
   //   show the third screen
   static thirdScreen(data: any[]): void {
     // hide the first and second screen
     Views.getElements().firstScreen.style.display = "none";
-    Views.getElements().menuScreen.style.display = "none";
+    Views.getElements().menuScreen.style.left = "-100%";
     Views.getElements().secondScreen.style.opacity = "0.2";
 
     // background color passing
@@ -81,6 +91,12 @@ export class Views {
     Views.viewsBackground(Views.getElements().thirdScreen);
     // hide the background element
     Views.hideBackground(Views.getElements().thirdScreen);
+
+    // days cards entry animation
+    const days = document.querySelectorAll<HTMLElement>(".days")!;
+    Array.from(days).forEach((day: HTMLElement) => {
+      Views.daysAnimReset(day);
+    });
   }
 
   //   show search view
@@ -89,7 +105,8 @@ export class Views {
     Views.getElements().firstScreen.style.display = "none";
     Views.getElements().secondScreen.style.opacity = "0.2";
     Views.getElements().thirdScreen.style.display = "none";
-    Views.getElements().menuScreen.style.display = "none";
+    Views.getElements().menuScreen.style.left = "-100%";
+    // Views.getElements().menuScreen.style.display = "none";
 
     // show the search screen
     Views.getElements().searchScreen.style.display = "flex";
@@ -101,6 +118,12 @@ export class Views {
     Views.hideBackground(Views.getElements().searchScreen);
     // close menu
     Views.closeSearch();
+
+    // days cards entry animation
+    const days = document.querySelectorAll<HTMLElement>(".days")!;
+    Array.from(days).forEach((day: HTMLElement) => {
+      Views.daysAnimReset(day);
+    });
   }
 
   //   show menu view
@@ -111,13 +134,19 @@ export class Views {
     Views.getElements().thirdScreen.style.display = "none";
     Views.getElements().searchScreen.style.display = "none";
     // show the search screen
-    Views.getElements().menuScreen.style.display = "flex";
+    // Views.getElements().menuScreen.style.display = "flex";
+    Views.getElements().menuScreen.style.left = "0";
     // show the background element
     Views.viewsBackground(Views.getElements().menuScreen);
     // hide the background element
     Views.hideBackground(Views.getElements().menuScreen);
     // close menu
     Views.closeMenu();
+    // days cards entry animation
+    const days = document.querySelectorAll<HTMLElement>(".days")!;
+    Array.from(days).forEach((day: HTMLElement) => {
+      Views.daysAnimReset(day);
+    });
   }
 
   //   close search
@@ -160,7 +189,8 @@ export class Views {
     Views.getElements().firstScreen.style.display = "none";
     Views.getElements().secondScreen.style.opacity = "0.2";
     Views.getElements().thirdScreen.style.display = "none";
-    Views.getElements().menuScreen.style.display = "none";
+    // Views.getElements().menuScreen.style.display = "none";
+    Views.getElements().menuScreen.style.left = "-100%";
     Views.getElements().searchScreen.style.display = "none";
 
     // appearance of the loader
@@ -174,5 +204,15 @@ export class Views {
       // show second screen
       Views.secondScreen();
     }, 2000);
+  }
+
+  // days entry animation
+  static daysAnim(day: HTMLElement): void {
+    day.style.marginTop = "0rem";
+  }
+
+  // reset days entry animation
+  static daysAnimReset(day: HTMLElement): void {
+    day.style.marginTop = "2rem";
   }
 }
