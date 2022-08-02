@@ -1,10 +1,11 @@
 // this file takes care of the autocmplete feature
 import { PrintData } from "./printdata";
+import { AUTOCOMPLET_KEY } from "../../../../builds";
 
 export class Search {
   static async autocomplete(searchTerm: string) {
     if (searchTerm.length >= 3) {
-      const apiKey = process.env.AUTOCOMPLET_KEY as string;
+      const apiKey = AUTOCOMPLET_KEY as string;
 
       const getAuto = await fetch(
         "https://api.geoapify.com/v1/geocode/autocomplete?text=" +
