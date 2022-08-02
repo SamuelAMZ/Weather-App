@@ -87,7 +87,6 @@ export class PrintData {
 
     // set new arr to the localstorage for global use
     localStorage.setItem("dataArr", JSON.stringify(dataArr));
-    console.log(dataArr);
 
     // location print
     const location = document.getElementById("location") as HTMLElement;
