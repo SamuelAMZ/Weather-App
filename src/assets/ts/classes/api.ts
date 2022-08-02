@@ -1,12 +1,11 @@
 // processing APIs
 import { PrintData } from "./printdata";
-import { WEATHER_KEY, IPDETECT_KEY } from "../../../../builds";
 
 export class Api {
   // process weather api
   static async weather(keyword: string) {
     // options
-    const key = WEATHER_KEY as string;
+    const key = process.env.WEATHER_KEY as string;
 
     const options = {
       method: "GET",
@@ -40,7 +39,7 @@ export class Api {
     if (localStorage.getItem("usrCity")) {
       PrintData.getApiData(localStorage.getItem("usrCity")!);
     } else {
-      let token = IPDETECT_KEY as string;
+      let token = process.env.IPDETECT_KEY as string;
 
       const cityInfo = await fetch("https://ipinfo.io?token=" + token);
       const res = await cityInfo.json();
