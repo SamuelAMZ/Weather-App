@@ -58,6 +58,7 @@
     // height: 85vh;
     // width: 1440px;
     margin: 0 auto;
+    padding-bottom: 10rem;
 
     .second-body-header {
       min-height: 5vh;
@@ -87,7 +88,7 @@
       position: relative;
       overflow: hidden;
       @include b.breakpoint(extra) {
-        min-height: 60vh;
+        min-height: 50vh;
       }
       @include b.breakpoint(large) {
         width: 100%;

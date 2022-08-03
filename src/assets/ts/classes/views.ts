@@ -120,6 +120,8 @@ export class Views {
     Array.from(days).forEach((day: HTMLElement) => {
       Views.daysAnimReset(day);
     });
+
+    document.querySelector<HTMLElement>(".close-menu")!.style.display = "none";
   }
 
   //   show menu view

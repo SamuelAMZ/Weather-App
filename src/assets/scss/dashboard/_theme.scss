@@ -12,12 +12,16 @@ body.theme-2 {
 }
 
 .mode-itself {
+  position: fixed;
+  top: 0;
+  right: 0;
+
   width: 1px;
   height: 1px;
   border-radius: 100%;
   background-color: #212121;
   z-index: -1000;
-  transition: transform 0.8s ease-out;
+  transition: 0.8s ease-out;
 }
 
 .theme-animation {

@@ -72,6 +72,10 @@ export class Events {
     document
       .querySelector<HTMLElement>("#search-input-elements")!
       .addEventListener("click", (): void => {
+        // hide back element
+        if (document.querySelector<HTMLElement>(".back-element")) {
+          document.querySelector<HTMLElement>(".back-element")!.remove();
+        }
         Views.searchView();
       });
 

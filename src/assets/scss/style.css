@@ -6,7 +6,7 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body.theme-1 {
@@ -22,12 +22,15 @@ body.theme-2 {
 }
 
 .mode-itself {
+  position: fixed;
+  top: 0;
+  right: 0;
   width: 1px;
   height: 1px;
   border-radius: 100%;
   background-color: #212121;
   z-index: -1000;
-  transition: transform 0.8s ease-out;
+  transition: 0.8s ease-out;
 }
 
 .theme-animation {
@@ -242,6 +245,7 @@ body.theme-2 {
 }
 .second-screen-container .second-body {
   margin: 0 auto;
+  padding-bottom: 10rem;
 }
 .second-screen-container .second-body .second-body-header {
   min-height: 5vh;
@@ -274,7 +278,7 @@ body.theme-2 {
 }
 @media (max-width: 1440px) {
   .second-screen-container .second-body .current-weather {
-    min-height: 60vh;
+    min-height: 50vh;
   }
 }
 @media (max-width: 900px) {
